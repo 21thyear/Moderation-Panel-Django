@@ -6,7 +6,8 @@ SECRET_KEY = 'django-insecure-6+q%1j438f@9pe06gw#xz6#d*gqam#4d_7(0&a1xe8+(_lsrdp
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "127.0.0.1"
+    "127.0.0.1",
+    ".pythonanywhere.com" # free web host
 ]
 
 
