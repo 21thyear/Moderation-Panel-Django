@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def header(request):
+def headerPage(request):
     return render(request, 'headerpage/header.html', {})
