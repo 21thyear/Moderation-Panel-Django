@@ -23,6 +23,7 @@ INSTALLED_APPS = [
 
     'headerpage', # Main page
     'interviewAdd', # Собеседования на модератора
+    'BlacklistAdd', # Черный список модерации
 ]
 
 MIDDLEWARE = [
