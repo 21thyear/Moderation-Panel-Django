@@ -10,7 +10,6 @@ ALLOWED_HOSTS = [
     ".pythonanywhere.com" # free web host
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
