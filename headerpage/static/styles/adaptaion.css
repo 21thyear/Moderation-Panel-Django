@@ -1,0 +1,49 @@
+@media (min-width: 375px) { 
+    .authText {
+        position: absolute;
+        left: 12.5%;
+        top: 0px;
+    }
+    .toggle {
+        height: 100%;
+        width: 200%;
+        right: 0px;
+    }
+    .authWelcomeText {
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        font-size: 21px;
+    }
+    #register {
+        appearance: none;
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+
+        width: 150px;
+        height: 40px;
+
+        position: absolute;
+        right: 12.5%;
+        top: 60%;
+    }
+    .loginBtn {
+        appearance: none;
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+
+        width: 130px;
+        height: 40px;
+
+        left: 17.5%;
+        top: 75%;
+    }
+    .forgotPassword {
+        text-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
