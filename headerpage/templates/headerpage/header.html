@@ -1,8 +1,10 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -13,45 +15,45 @@
         <div class="container" id="container">
             <div class="form-container sign-up">
                 <form action="php/register.php" method="POST">
-                    <h1>Создание аккаунта</h1>
+                    <h1 class="createAccount">Создание аккаунта</h1>
                     
                     <div class="social-icons">
                         <a href="#" class="icon"><i class="fa-brands fa-discord"></i></a>
                         <a href="#" class="icon"><i class="fa-brands fa-telegram"></i></a>
                     </div>
 
-                    <span>или используйте почту для регистрации</span>
+                    <span class="info-text">или используйте почту для регистрации</span>
 
-                    <input type="text" placeholder="Имя" name="name">
-                    <input type="email" placeholder="Почта" name="email">
-                    <input type="password" placeholder="Пароль" name="password">
+                    <input type="text" placeholder="Имя" name="name" value="{{ register_name }}">
+                    <input type="email" placeholder="Почта" name="email" value="{{ register_mail }}">
+                    <input type="password" placeholder="Пароль" name="password" value="{{ register_pass }}">
                     
                     <button>Регистрация</button>
                 </form>
             </div>
             <div class="form-container sign-in">
                 <form action="php/login.php" method="POST">
-                    <h1>Авторизация</h1>
+                    <h1 class="loginText">Авторизация</h1>
                     <div class="social-icons">
                         <a href="#" class="icon"><i class="fa-brands fa-discord"></i></a>
                         <a href="#" class="icon"><i class="fa-brands fa-telegram"></i></a>
                     </div>
-                    <span>или используйте почту для входа</span>
-                    <input type="email" placeholder="Почта" name="email">
-                    <input type="password" placeholder="Пароль" name="password">
-                    <a href="php/reset_password.php">Забыли пароль?</a>
+                    <span class="info-text-auth">или используйте почту для входа</span>
+                    <input class="inputEmail" type="email" placeholder="Почта" name="email" >
+                    <input class="inputPassword" type="password" placeholder="Пароль" name="password" >
+                    <a href="php/reset_password.php" class="forgotPassword">Забыли пароль?</a>
                     <button>Авторизация</button>
                 </form>
             </div>
             <div class="toggle-container">
                 <div class="toggle">
                     <div class="toggle-panel toggle-left">
-                        <h1>Добро пожаловать!</h1>
+                        <h1 class="welcomeText">Добро пожаловать!</h1>
                         <p>Перейти к авторизации?</p>
-                        <button class="hidden" id="login">Авторизация</button>
+                        <button class="hidden" id="login" class="buttonLogin">Авторизация</button>
                     </div>
                     <div class="toggle-panel toggle-right">
-                        <h1>Добро пожаловать!</h1>
+                        <h1 class="welcomeText">Добро пожаловать!</h1>
                         <p>Пройти регистрацию?</p>
                         <button class="hidden" id="register">Регистрация</button>
                     </div>
@@ -271,6 +273,7 @@
                 transform: translateX(200%);
             }
         </style>
+
         <script>
             const container = document.getElementById('container');
             const registerBtn = document.getElementById('register');
@@ -284,5 +287,9 @@
                 container.classList.remove("active");
             });
         </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
-</html>
+</html> 
