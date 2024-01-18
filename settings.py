@@ -85,7 +85,10 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_DIRS = [
+   os.path.join(BASE_DIR, "static"),
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 USERS_TEMPLATE_PACK = 'bootstrap4'
